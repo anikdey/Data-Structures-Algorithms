@@ -2,7 +2,6 @@ package problemsofarray;
 
 //How do you find the duplicate number on a given integer array?
 
-
 //        Output :
 //        Array with Duplicates       : [1, 1, 2, 2, 3, 4, 5]
 //        After removing duplicates   : [1, 0, 2, 0, 3, 4, 5]
@@ -20,13 +19,12 @@ import java.util.Map;
 public class FindDuplicateNumberInArray {
 
     public static void main(String[] args) {
-
         int[] originalArray = {1, 1, 2, 2, 3, 4, 5, 1};
+
 
         //System.out.println(Arrays.toString(removeDuplicateUsingMap(originalArray)));
         //System.out.println("Remove After Sorting" + Arrays.toString(removeAfterSorting(originalArray)));
-        System.out.println("Remove & return new array" + Arrays.toString(removeAndReturnNewArray(originalArray)));
-
+        //System.out.println("Remove & return new array" + Arrays.toString(removeAndReturnNewArray(originalArray)));
     }
 
     public static int[] removeDuplicateUsingMap(int[] originalArray) {
@@ -42,7 +40,6 @@ public class FindDuplicateNumberInArray {
 
         return originalArray;
     }
-
 
     public static int[] removeAfterSorting(int[] originalArray) {
         Arrays.sort(originalArray);
@@ -80,4 +77,5 @@ public class FindDuplicateNumberInArray {
         }
         return newArray;
     }
+
 }
