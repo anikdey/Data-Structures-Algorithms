@@ -26,6 +26,8 @@ public interface ISinglyLinkedList<T> {
 
     void reverse();
 
+    boolean searchItem(T data);
+
     void printList();
 
 }

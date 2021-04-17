@@ -6,8 +6,8 @@ public class TestSinglyLinedList {
 
 
         basicOperations();
-        disconnectMiddleNode();
 
+        //disconnectMiddleNode();
 
     }
 
@@ -22,8 +22,12 @@ public class TestSinglyLinedList {
         System.out.println("Last element "+ list.last());
         System.out.println("Item at index "+ list.getItemAt(2));
 
+        list.reverse();
+        list.printList();
 
+        System.out.println(list.getFromTail(2));
 
+        System.out.println("Item exists or not "+list.searchItem("Anik"));
 
     }
 

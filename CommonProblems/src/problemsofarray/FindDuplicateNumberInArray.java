@@ -23,8 +23,9 @@ public class FindDuplicateNumberInArray {
 
 
         //System.out.println(Arrays.toString(removeDuplicateUsingMap(originalArray)));
+        System.out.println("Before : "+ Arrays.toString(originalArray));
         //System.out.println("Remove After Sorting" + Arrays.toString(removeAfterSorting(originalArray)));
-        //System.out.println("Remove & return new array" + Arrays.toString(removeAndReturnNewArray(originalArray)));
+        System.out.println("Remove & return new array " + Arrays.toString(removeAndReturnNewArray(originalArray)));
     }
 
     public static int[] removeDuplicateUsingMap(int[] originalArray) {
@@ -44,7 +45,6 @@ public class FindDuplicateNumberInArray {
     public static int[] removeAfterSorting(int[] originalArray) {
         Arrays.sort(originalArray);
         int prev = originalArray[0];
-
         for(int i=1; i<originalArray.length; i++) {
             int current = originalArray[i];
             if(current == prev) {

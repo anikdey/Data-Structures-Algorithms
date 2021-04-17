@@ -1,7 +1,5 @@
 package chapter3.singlelinkedlist;
 
-import javax.swing.*;
-
 public class SinglyLinkedList<T> implements ISinglyLinkedList<T> {
 
     private Node<T> head = null;
@@ -84,6 +82,40 @@ public class SinglyLinkedList<T> implements ISinglyLinkedList<T> {
 
     @Override
     public T getFromTail(int position) {
+        if(position>size-1)
+            return null;
+        else{
+            return getFromTailIterative(position);
+//            int counter = 0;
+//            Node<T> temp = head;
+//            Node<T> expectedNode = null;
+//            while (temp!=null) {
+//                if(counter>position-1) {
+//                    expectedNode = temp;
+//                }
+//                counter++;
+//                temp = temp.next;
+//            }
+//            return expectedNode.data;
+        }
+    }
+
+    private T getFromTailIterative(int position) {
+        int counter = 0;
+        Node<T> temp = head;
+        Node<T> expectedNode = null;
+        while (temp!=null) {
+            if(counter>position-1) {
+                expectedNode = temp;
+            }
+            counter++;
+            temp = temp.next;
+        }
+        return expectedNode.data;
+    }
+
+    private T getFromTailRecursively(int position, Node<T> currentNode) {
+        //Todo implement getFromTailRecursively recursively...
         return null;
     }
 
@@ -103,7 +135,50 @@ public class SinglyLinkedList<T> implements ISinglyLinkedList<T> {
 
     @Override
     public void reverse() {
-        
+        iterative();
+        //reverseRecursively(head);
+    }
+
+    private void iterative() {
+        Node<T> prevNode = null;
+        Node<T> tempNode = head;
+        while (tempNode != null) {
+            Node<T> nextNode = tempNode.next;
+            tempNode.next = prevNode;
+            prevNode = tempNode;
+            tempNode = nextNode;
+        }
+        head = prevNode;
+    }
+
+    private void reverseRecursively(Node<T> currentNode) {
+        if (currentNode == null) {
+            return;
+        }
+
+        if(currentNode.getNext() == null) {
+            this.head = currentNode;
+            return;
+        }
+        reverseRecursively(currentNode.getNext());
+        currentNode.getNext().setNext(currentNode);
+        currentNode.setNext(null);
+    }
+
+    @Override
+    public boolean searchItem(T data) {
+        Node<T> temp = head;
+        while (temp != null) {
+            if(temp.data == data) {
+                return true;
+            }
+            temp = temp.next;
+        }
+        return false;
+    }
+
+    private void searchRecursively() {
+        //Todo implement search recursively...
     }
 
     @Override
