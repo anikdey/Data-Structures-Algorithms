@@ -10,6 +10,10 @@ public class SinglyLinkedList<T> implements ISinglyLinkedList<T> {
 
     }
 
+    public Node<T> getHead() {
+        return head;
+    }
+
     @Override
     public int size() {
         return size;
@@ -18,6 +22,11 @@ public class SinglyLinkedList<T> implements ISinglyLinkedList<T> {
     @Override
     public boolean isEmpty() {
         return size == 0;
+    }
+
+    @Override
+    public void add(T data) {
+        addLast(data);
     }
 
     @Override
@@ -86,17 +95,6 @@ public class SinglyLinkedList<T> implements ISinglyLinkedList<T> {
             return null;
         else{
             return getFromTailIterative(position);
-//            int counter = 0;
-//            Node<T> temp = head;
-//            Node<T> expectedNode = null;
-//            while (temp!=null) {
-//                if(counter>position-1) {
-//                    expectedNode = temp;
-//                }
-//                counter++;
-//                temp = temp.next;
-//            }
-//            return expectedNode.data;
         }
     }
 
@@ -213,7 +211,7 @@ public class SinglyLinkedList<T> implements ISinglyLinkedList<T> {
         }
     }
 
-    private static class Node<T> {
+    static class Node<T> {
 
         private T data;
         private Node<T> next;

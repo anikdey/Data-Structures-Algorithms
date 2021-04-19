@@ -6,6 +6,8 @@ public interface ISinglyLinkedList<T> {
 
     boolean isEmpty();
 
+    void add(T data);
+
     void addFirst(T data);
 
     void addLast(T data);
