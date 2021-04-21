@@ -94,7 +94,10 @@ public class SinglyLinkedList<T> implements ISinglyLinkedList<T> {
         if(position>size-1)
             return null;
         else{
-            return getFromTailIterative(position);
+            //return getFromTailIterative(position);
+            Node<T> temp = head;
+            getFromTailRecursively(position, temp);
+            return expectedData;
         }
     }
 
@@ -112,9 +115,20 @@ public class SinglyLinkedList<T> implements ISinglyLinkedList<T> {
         return expectedNode.data;
     }
 
-    private T getFromTailRecursively(int position, Node<T> currentNode) {
-        //Todo implement getFromTailRecursively recursively...
-        return null;
+    private int count = 0;
+    private T expectedData;
+
+    private void getFromTailRecursively(int position, Node<T> currentNode) {
+        if(currentNode.next == null) {
+            return;
+        }
+        getFromTailRecursively(position, currentNode.getNext());
+        count = count + 1;
+        if(count == position) {
+            expectedData = currentNode.data;
+            count = 0;
+            return;
+        }
     }
 
     @Override
