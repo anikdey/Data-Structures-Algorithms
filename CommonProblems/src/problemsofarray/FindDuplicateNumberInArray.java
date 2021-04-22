@@ -1,6 +1,6 @@
 package problemsofarray;
 
-//How do you find the duplicate number on a given integer array?
+// 2. How do you find the duplicate number on a given integer array?
 
 //        Output :
 //        Array with Duplicates       : [1, 1, 2, 2, 3, 4, 5]
