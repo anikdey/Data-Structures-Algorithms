@@ -36,12 +36,13 @@
 
 18. Write a program in Java to find the Hailstone Sequence of a given number upto 1.
 
-19. Write a program in Java to copy One string to another using recursion. (Done)
+19. Write a program in Java to copy One string to another using recursion.
 
 20. Write a program in Java to find the first capital letter in a string using recursion. //The first capital letter appears in the string testString is S.
 
 21. Write a program in Java for binary search using recursion. (Done)
 
-22. Write a recursive function to reverse a string.
 
-23.Write a recursive function to reverse the words in a string, i.e., ”cat is running” becomes ”running is cat”.
+22. Write a recursive function to reverse a string. Write a recursive
+function to reverse the words in a string, i.e., ”cat is running”
+becomes ”running is cat”.
