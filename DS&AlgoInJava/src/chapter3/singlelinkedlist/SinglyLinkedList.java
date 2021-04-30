@@ -239,6 +239,10 @@ public class SinglyLinkedList<T> implements ISinglyLinkedList<T> {
             return data;
         }
 
+        public void setData(T data) {
+            this.data = data;
+        }
+
         public Node<T> getNext() {
             return next;
         }

@@ -7,6 +7,8 @@ import java.util.Arrays;
 public class MaxValueKnapsack0_1 {
 
 
+    static int[][] matrix;
+
     public static void main(String[] args) {
 
         int values[] = new int[] { 60, 100, 120 };
@@ -17,10 +19,38 @@ public class MaxValueKnapsack0_1 {
 //        int weight[] = new int[] { 1, 2, 3 };
 //        int capacity = 6;
 
+        matrix = new int[weight.length+1][capacity+1];
+
+        for (int[] row: matrix)
+            Arrays.fill(row, -1);
+
+
         //System.out.println(getKnapsack(weight, values, capacity));
         System.out.println(getKnapsackAgain( values, weight, capacity));
         //System.out.println(knapSack(6, weight, values, values.length));
+
+        System.out.println("Knapsack Recursive : " + knapsackRecursive(weight, values, capacity, weight.length));
+
     }
+
+
+    static int knapsackRecursive(int[] weight, int[] values, int w, int n) {
+        if(w==0 || n==0){
+            return 0;
+        }
+
+        if(matrix[n][w] != -1)
+            return matrix[n][w];
+
+        if(weight[n-1]<=w){
+            return matrix[n][w] = max(values[n-1] + knapsackRecursive(weight, values, w - weight[n-1], n-1), knapsackRecursive(weight, values, w, n-1));
+        } else {
+            return matrix[n][w] = knapsackRecursive(weight, values, w, n-1);
+        }
+
+    }
+
+
 
     static int knapSack(int W, int wt[], int val[], int n) {
         int i, w;
@@ -69,8 +99,7 @@ public class MaxValueKnapsack0_1 {
         return knapsack[n][m];
     }
 
-    static int max(int a, int b)
-    {
+    static int max(int a, int b) {
         return (a > b) ? a : b;
     }
 
