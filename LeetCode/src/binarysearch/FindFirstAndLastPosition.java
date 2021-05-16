@@ -24,7 +24,7 @@ public class FindFirstAndLastPosition {
         int endingIndex = nums.length - 1;
         while (startingIndex<=endingIndex) {
             int mid = startingIndex + (endingIndex-startingIndex)/2;
-            if(mid >0 && nums[mid] == target && nums[mid-1]<target) {
+            if(mid > 0 && nums[mid] == target && nums[mid-1]<target) {
                 return mid;
             } else if( nums[mid] < target ) {
                 startingIndex = mid + 1;
