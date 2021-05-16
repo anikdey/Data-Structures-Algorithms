@@ -12,8 +12,8 @@ public class BinaryGap {
         System.out.println(gapCount(1041));
     }
 
-    public static int gapCount(int number) {
-        String binaryString = Integer.toBinaryString(number);
+    public static int gapCount(int N) {
+        String binaryString = Integer.toBinaryString(N);
         boolean isFoundOne = false;
         boolean isCurrentGap = false;
         int countOfGap = 0;
@@ -43,6 +43,9 @@ public class BinaryGap {
                 }
             }
         }
+
+        System.out.println("Binary String is " + binaryString + ", gap is "+maxLength);
+
         return maxLength;
     }
 
