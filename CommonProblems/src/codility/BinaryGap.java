@@ -1,5 +1,7 @@
 package codility;
 
+import java.util.Arrays;
+
 public class BinaryGap {
 
     public static void main(String[] args) {
@@ -10,10 +12,18 @@ public class BinaryGap {
         System.out.println(gapCount(32));
         System.out.println(gapCount(529));
         System.out.println(gapCount(1041));
+
+
+        int[] array = {1,1,2,2,3,4,5,5};
+        long count = Arrays.stream(array).distinct().count();
+        System.out.println(count);
+
     }
 
     public static int gapCount(int N) {
         String binaryString = Integer.toBinaryString(N);
+
+
         boolean isFoundOne = false;
         boolean isCurrentGap = false;
         int countOfGap = 0;
