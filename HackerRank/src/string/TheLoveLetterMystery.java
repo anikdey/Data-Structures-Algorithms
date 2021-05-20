@@ -4,12 +4,20 @@ public class TheLoveLetterMystery {
 
     public static void main(String[] args) {
         //System.out.println(theLoveLetterMystery("ac"));
-        System.out.println(theLoveLetterMystery("abc"));
-        System.out.println(theLoveLetterMystery("abcba"));
-        System.out.println(theLoveLetterMystery("abcd"));
-        System.out.println(theLoveLetterMystery("cba"));
-        System.out.println(theLoveLetterMystery(""));
-        System.out.println(theLoveLetterMystery("a"));
+//        System.out.println(theLoveLetterMystery("abc"));
+//        System.out.println(theLoveLetterMystery("abcba"));
+//        System.out.println(theLoveLetterMystery("abcd"));
+//        System.out.println(theLoveLetterMystery("cba"));
+//        System.out.println(theLoveLetterMystery(""));
+//        System.out.println(theLoveLetterMystery("a"));
+//        System.out.println(theLoveLetterMystery("readys"));
+//        System.out.println(theLoveLetterMystery("abdf"));
+        System.out.println(theLoveLetterMystery("cgkw"));
+        System.out.println(theLoveLetterMystery("abdnop"));
+        System.out.println(theLoveLetterMystery("kptr"));
+        System.out.println(theLoveLetterMystery("pemul"));
+        System.out.println(theLoveLetterMystery("bdmn"));
+        System.out.println(theLoveLetterMystery("ekrs"));
     }
 
 

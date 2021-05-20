@@ -5,13 +5,13 @@ import java.util.Arrays;
 public class CyclicRotation {
 
     public static void main(String[] args) {
-//        int[] a = {3, 8, 9, 7, 6};
-//        int k = 3;
+        int[] a = {3, 8, 9, 7, 6};
+        int k = 3;
 
 //        int[] a = {3, 8, 9, 7, 6};
 //        int k = 0;
-        int[] a = {};
-        int k = 3;
+//        int[] a = {};
+//        int k = 3;
 
 
         System.out.println(Arrays.toString(solution(a,k)));
