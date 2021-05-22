@@ -13,7 +13,6 @@ public class CyclicRotation {
 //        int[] a = {};
 //        int k = 3;
 
-
         System.out.println(Arrays.toString(solution(a,k)));
     }
 
