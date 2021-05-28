@@ -3,39 +3,26 @@ package string;
 public class BalancedStrings {
 
     public static void main(String[] args) {
-
+        System.out.println(balancedStringSplit("LLLRRLRLRR"));
     }
 
-    public int balancedStringSplit(String s) {
-
+    public static int balancedStringSplit(String s) {
         int count = 0;
-        char prevChar = s.charAt(0);
+        int countOfLR = 0;
 
-        int countOfR = 0;
-        int countOfL = 0;
+        for(int i=0; i<s.length(); i++) {
 
-        if(prevChar == 'R')
-            countOfR++;
-        else
-            countOfL++;
-
-        for(int i=1; i<s.length(); i++) {
-            char currentChar = s.charAt(i);
-
-            if(currentChar=='R')
-                countOfR++;
-            else
-                countOfL++;
-
-
-
-            if(prevChar != currentChar) {
-                prevChar = currentChar;
+            if(s.charAt(i) == 'L') {
+                countOfLR++;
+            } else {
+                countOfLR--;
             }
-
-
-
+            if(countOfLR == 0) {
+                count++;
+            }
         }
+
+
         return count;
     }
 
