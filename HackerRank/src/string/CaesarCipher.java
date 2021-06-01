@@ -4,17 +4,6 @@ public class CaesarCipher {
 
     public static void main(String[] args) {
 
-        int sdA = 'A';
-        int sddfZ = 'Z';
-
-        int sd = 'a';
-        int sddf = 'z';
-
-
-        System.out.println(sd);
-        System.out.println(sddf);
-        System.out.println(sdA);
-        System.out.println(sddfZ);
 
         System.out.println(caesarCipher("Anik", 3));
         System.out.println(caesarCipher("abcdefghijklmnopqrstuvwxyz", 3));
