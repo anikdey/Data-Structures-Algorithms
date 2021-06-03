@@ -12,7 +12,7 @@ public class RemoveAllAdjacentDuplicatesInString {
         boolean isDuplicateFound = false;
 
         StringBuilder stringBuilder = new StringBuilder();
-        Stack<Character> stack = 
+        //Stack<Character> stack =
 
         if(isDuplicateFound) {
             return removeDuplicates(stringBuilder.toString());
