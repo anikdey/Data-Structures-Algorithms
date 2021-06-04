@@ -15,7 +15,6 @@ public class Gemstones {
 
     }
 
-
     public static int gemstones(List<String> arr) {
         int count = 0;
         int[] freq = new int[26];
