@@ -1,4 +1,4 @@
-package string;
+package string.inprogress;
 
 import java.util.HashSet;
 import java.util.Set;
