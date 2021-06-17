@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class PermutationString1_2 {
 
     public static void main(String[] args) {
-        
+
         System.out.println(isPermutation("abcd", "dabc"));
 
     }
@@ -15,9 +15,6 @@ public class PermutationString1_2 {
             return false;
 
         int[] freq = new int[256];
-
-        freq[65] = 0;
-        freq[69] = 0;
 
         int length = firstString.length();
 
