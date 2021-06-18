@@ -3,6 +3,7 @@ package string.easy;
 public class ValidAnagram {
 
     public static void main(String[] args) {
+        //System.out.println(isAnagram("rat", "car"));
         System.out.println(isAnagram("rat", "car"));
     }
 
@@ -12,10 +13,13 @@ public class ValidAnagram {
         int[] countArray = new int[26];
 
         for(int i=0; i<s.length(); i++) {
+
             char firstChar = s.charAt(i);
             char secondChar = t.charAt(i);
+
             int fIndex = firstChar - 'a';
             countArray[fIndex]++;
+
             int sIndex = secondChar - 'a';
             countArray[sIndex]--;
         }
