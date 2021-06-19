@@ -1,4 +1,4 @@
-package string.inprogress;
+package string.easy;
 
 public class StringWithOddCharactersCounts {
 
