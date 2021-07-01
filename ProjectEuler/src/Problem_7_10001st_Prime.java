@@ -1,4 +1,4 @@
-public class Problem_7_10001stPrime {
+public class Problem_7_10001st_Prime {
 
     public static void main(String[] args) {
         System.out.println(findNthPrime(10001));

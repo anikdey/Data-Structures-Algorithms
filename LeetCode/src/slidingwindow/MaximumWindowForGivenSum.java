@@ -4,8 +4,13 @@ package slidingwindow;
 public class MaximumWindowForGivenSum {
 
     public static void main(String[] args) {
-        int[] nums = {50,2,3,4,5,1,1,1,1,-1,1,1,9};
-        int sum = 5;
+//        int[] nums = {50,2,3,4,5,1,1,1,1,-1,1,1,9};
+//        int sum = 5;
+
+        int[] nums = {-5, 8, -14, 2, 4, 12 };
+        int sum = -5;
+
+
         System.out.println(maxWindow(nums, sum));
     }
 
@@ -20,7 +25,7 @@ public class MaximumWindowForGivenSum {
                 if(windowLength>maxWindow)
                     maxWindow = windowLength;
             } else if(calculatedSum>sum) {
-                while (calculatedSum>sum) {
+                while (calculatedSum>sum && trailing<=i) {
                     calculatedSum -= nums[trailing];
                     trailing++;
                     if(calculatedSum == sum) {

@@ -1,6 +1,6 @@
 import java.util.Calendar;
 
-public class Problem_4_LargestPalindromeProduct {
+public class Problem_4_Largest_Palindrome_Product {
 
     public static void main(String[] args) {
 
