@@ -1,4 +1,4 @@
-package array;
+package array.easy;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +25,7 @@ public class CheckIfNAndItsDoubleExist {
         return false;
     }
 
-    
+
 
 
 }
