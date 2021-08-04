@@ -1,4 +1,4 @@
-package math;
+package math.easy;
 
 public class SubtractTheProductAndSumOfDigitsOfAnInteger {
 
