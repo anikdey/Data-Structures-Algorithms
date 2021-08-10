@@ -31,8 +31,4 @@ public class PeakIndexInMountainArray {
         return expectedIndex;
     }
 
-    public static String defangIPaddr(String address) {
-        return address.replaceAll("[*.]", "[.]");
-    }
-
 }

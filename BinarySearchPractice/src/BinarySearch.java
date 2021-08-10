@@ -28,7 +28,6 @@ public class BinarySearch {
         return -1;
     }
 
-
     public static int binarySearchDesc(int[] numbers, int number) {
         int start = 0;
         int end = numbers.length-1;
@@ -44,7 +43,6 @@ public class BinarySearch {
         }
         return -1;
     }
-
 
     public static int orderAgnosticBinarySearch(int[] numbers, int number) {
         if(numbers.length == 1) {
