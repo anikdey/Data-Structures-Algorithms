@@ -5,6 +5,8 @@ public class FloorAndCeilOfANumber {
         //System.out.println(findFloor(new int[]{1,2,3,4,5,6,7,8,9,10,10,11,11,11}, 5));
         System.out.println(findFloor(new int[]{1, 2, 8, 10, 10, 12, 19}, 2));
         System.out.println(findFloor(new int[]{1, 2, 8, 10, 10, 12, 19}, 20));
+
+        System.out.println(findFloor(new int[]{1, 2, 8, 10, 10, 12, 19}, 0));
         System.out.println(findFloor(new int[]{1, 2, 8, 10, 10, 12, 19}, 0));
 
         System.out.println("=====================");
