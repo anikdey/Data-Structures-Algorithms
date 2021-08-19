@@ -3,6 +3,10 @@ package chapter11;
 import chapter6.queue.LinkedQueue;
 import chapter6.queue.Queue;
 
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedList;
+
 public class BinarySearchTree {
 
     private Node root;
@@ -131,6 +135,7 @@ public class BinarySearchTree {
     public void printLevelOrder(Node root) {
         if (root == null)
             return;
+
         Queue<Node> queue = new LinkedQueue<>();
         queue.enqueue(root);
         while (!queue.isEmpty()) {
