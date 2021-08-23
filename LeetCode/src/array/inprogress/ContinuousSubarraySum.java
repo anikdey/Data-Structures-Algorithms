@@ -1,4 +1,4 @@
-package array;
+package array.inprogress;
 
 public class ContinuousSubarraySum {
 
