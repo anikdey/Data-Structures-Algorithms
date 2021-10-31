@@ -1,4 +1,4 @@
-package array.inprogress;
+package array.easy;
 
 public class Student_Attendance_Record_551 {
 
