@@ -36,13 +36,11 @@ public class QuickSort {
 
     }
 
-
     private static void swap(int leftIndex, int rightIndex, int[] array) {
         int temp = array[leftIndex];
         array[leftIndex] = array[rightIndex];
         array[rightIndex] = temp;
     }
-
 
     public static void printArray(int[] arr) {
         for(int i=0; i<arr.length; i++) {
