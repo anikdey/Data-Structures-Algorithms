@@ -16,17 +16,17 @@ public class TestSinglyLinedList {
         list.addFirst("Anik");
         list.addLast("Dey");
         list.addLast("Pappu");
+        list.insertAt(0, "test");
+        list.insertAt(2, "Should insert after Anik");
         list.printList();
 
         System.out.println("First element "+ list.first());
         System.out.println("Last element "+ list.last());
         System.out.println("Item at index "+ list.getItemAt(2));
 
-        list.reverse();
-        list.printList();
-
+        //list.reverse();
+        //list.printList();
         System.out.println(list.getFromTail(2));
-
         System.out.println("Item exists or not "+list.searchItem("Anik"));
 
     }

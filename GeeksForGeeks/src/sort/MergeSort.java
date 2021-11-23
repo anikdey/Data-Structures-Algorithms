@@ -2,8 +2,13 @@ package sort;
 
 public class MergeSort {
 
+
     public static void main(String[] args) {
         printArray(testMerge());
+        int[] array = {3,4,56,6,4,3,4,5,6,3,56,6,77};
+        //int[] array = {9,8,7,6,5,4,3,2,1};
+        mergeSort(array, 0 , array.length-1);
+        printArray(array);
     }
 
     public static void mergeSort(int[] array, int start, int end) {
@@ -11,12 +16,46 @@ public class MergeSort {
             int mid = (start+end)/2;
             mergeSort(array, start, mid);
             mergeSort(array, mid+1, end);
-            merge(array, start, mid, end);
+            merge2(array, start, mid, end);
         }
     }
 
-    public static void merge(int[] array, int lowerBound, int mid, int upperBound) {
+    public static void merge2(int[] array, int lowerBound, int mid, int upperBound) {
+        int leftArraySize = mid - lowerBound + 1;
+        int rightArraySize = upperBound - mid;
 
+        int[] left = new int[leftArraySize];
+        int[] right = new int[rightArraySize];
+
+        for(int i=0; i<left.length; i++) {
+            left[i] = array[lowerBound+i];
+        }
+        for(int j=0; j<right.length; j++) {
+            right[j] = array[mid+j+1];
+        }
+        int k = lowerBound;
+        int l = 0;
+        int r = 0;
+        while (l<left.length && r<right.length) {
+            if(left[l]<=right[r]) {
+                array[k] = left[l];
+                l++;
+            } else {
+                array[k] = right[r];
+                r++;
+            }
+            k++;
+        }
+        while (l<left.length) {
+            array[k] = left[l];
+            l++;
+            k++;
+        }
+        while (r<right.length) {
+            array[k] = right[r];
+            r++;
+            k++;
+        }
     }
 
     public static int[] testMerge() {

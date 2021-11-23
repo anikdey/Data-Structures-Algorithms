@@ -56,12 +56,20 @@ public class SinglyLinkedList<T> implements ISinglyLinkedList<T> {
         if (position>size){
             return;
         }
-        if(size==0) {
+        if(size==0 || position == 0) {
             addFirst(data);
         } else if(position == size) {
             addLast(data);
         } else {
-
+            int pos = 1;
+            Node temp = head;
+            while (pos != position) {
+                temp = temp.next;
+                pos++;
+            }
+            Node<T> newestNode = new Node<>(data, temp.next);
+            temp.setNext(newestNode);
+            size++;
         }
     }
 

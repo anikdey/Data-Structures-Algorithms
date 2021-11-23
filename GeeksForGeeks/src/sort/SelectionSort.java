@@ -3,7 +3,7 @@ package sort;
 public class SelectionSort {
 
     public static void main(String[] args) {
-        int[] arr = {1,20, 22, 10, 25, 65, 100};
+        int[] arr = {1,20, 22, 10, 25, 65, 100,1,-1};
         selectionSort(arr);
 
         for(int i=0; i<arr.length; i++)
@@ -17,6 +17,7 @@ public class SelectionSort {
             int currentMin = arr[i];
             for(int x=i+1; x<arr.length; x++) {
                 if(currentMin>arr[x]) {
+                    currentMin = arr[x];
                     minIndex = x;
                 }
             }
