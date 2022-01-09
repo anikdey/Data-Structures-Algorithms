@@ -41,8 +41,7 @@ public class CircularlyLinkedList<T> implements ICircularlyLinkedList<T> {
             tail = new Node<>(element, null);
             tail.nextNode = tail;
         } else {
-            Node<T> node = new Node<>(element, tail.nextNode);
-            tail.nextNode = node;
+            tail.nextNode = new Node<>(element, tail.nextNode);
         }
         size++;
     }
